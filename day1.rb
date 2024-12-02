@@ -14,4 +14,14 @@ end
 distance_vector = Vector.elements(left_list.sort) - Vector.elements(right_list.sort)
 summed_distance = distance_vector.to_a.reduce{|sum, n| (sum).abs + (n).abs}
 
-puts "The answer is: #{summed_distance.to_s}"
+puts "The total distance is: #{summed_distance}"
+
+# Part 2 
+
+similarity_score = 0 
+
+left_list.each do |n|
+  similarity_score += n * right_list.find_all{|k| k == n}.length
+end
+
+puts "The total similarity score is: #{similarity_score}"
