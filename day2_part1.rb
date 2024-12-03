@@ -1,3 +1,5 @@
+# Day 2 Part 1
+
 input_file = File.new "day2_input.text"
 puzzle_input = input_file.read
 
@@ -15,4 +17,3 @@ puzzle_input.each_line do |line|
 end
 
 puts "There are #{safe_counter} safe reports in total."
-
