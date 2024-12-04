@@ -3,7 +3,6 @@
 def get_total_of_do_block(do_block)
   block_total = 0
   do_block.scan(/[m][u][l][(]\d{1,3}[,]\d{1,3}[)]/).each do |mul_instruction|
-    puts "Mul instruction is #{mul_instruction}"
     block_total += mul_instruction.scan(/\d{1,3}/).first.to_i * mul_instruction.scan(/\d{1,3}/).last.to_i 
   end
   block_total
